@@ -5,12 +5,13 @@ class Humano():
         self.name = name 
         self.pet = pet
     def Info (self):
-        description = ("Nacionalidad:{}\nname de especie:{}\nage:{}") 
-        print(description.format(self.nacionalidad,self.name, self.age)) 
+        description = ("Nacionalidad:{}\nNombre{}\nEdad:{}\nMascota:{}") 
+        print(description.format(self.nacionalidad,self.name, self.age,self.pet)) 
 
-    def Asignar (self,pet):
-        self.pet=pet
-        print ("{} Se le ha asignado la mascota {}".format(self.name,self.pet))
+    def Asignar (self,animal):
+        self.animal=animal
+        self.pet=animal
+
 
 
 class Animal():
@@ -21,13 +22,16 @@ class Animal():
         self.name=name
         self.owner=owner
     def Info (self):
-        description = ("Tipo:{}\nRaza:{}\nname de especie:{}\nage:{}") 
-        print(description.format(self.tipo,self.raza,self.name, self.age))
-    def Asignar (self,owner):
-        self.owner=owner
-        print("El dueño de la mascota {} es {}".format(self.name,self.owner))
+        description = ("Tipo:{}\nRaza:{}\nname de especie:{}\nage:{}\nDueño:{}") 
+        print(description.format(self.tipo,self.raza,self.name, self.age,self.owner))
+    def Asignar (self,dueño):
+        self.dueño=dueño
+        self.owner=dueño
 
         
 
 def callInfo(x):
     x.Info()
+
+def callAsignar(x,d):
+    x.Asignar(d)
